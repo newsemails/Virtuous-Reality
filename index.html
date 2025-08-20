@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Virtuous Reality | Love for Beauty</title>
+  <meta name="description" content="Catholic formation day for youth — Love for Beauty." />
+  <meta name="theme-color" content="#ffffff" />
+  <style>
+    :root{
+      --bg:#ffffff; --ink:#1f2329; --muted:#4a4f57; --ring:#e6e7ea;
+      --accent:#ff513b; --teal:#7aa8a3; --mint:#9fc8c2; --peach:#ff826f; --maxw:1100px;
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0; font:16px/1.6 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:var(--ink); background:var(--bg)}
+    img{max-width:100%; height:auto; display:block}
+    h1,h2,h3{line-height:1.15; margin:0 0 .6rem}
+    p{margin:.5rem 0 1rem}
+    a{color:inherit}
+    section{padding:clamp(2rem,6vw,4rem) 1rem}
+    .container{max-width:var(--maxw); margin:0 auto}
+
+    /* Language toggle inside hero, blob perfectly centered behind */
+    .lang-box{position:absolute; top:1rem; right:1rem; display:inline-flex; align-items:center; justify-content:center}
+    .b2{position:absolute; top:50%; left:50%; width:220px; height:220px; background:var(--mint); border-radius:50%; transform:translate(-50%,-50%); z-index:-1}
+    .chip{display:inline-flex; align-items:center; gap:.35rem; padding:.2rem; background:#fff; border:1px solid var(--ring); border-radius:999px; position:relative; z-index:1; box-shadow:0 4px 12px #00000018}
+    .chip button{border:0; background:transparent; padding:.35rem .7rem; border-radius:999px; font-weight:700; cursor:pointer}
+    .chip button[aria-pressed="true"]{background:#f6f7f8; border:1px solid var(--ring)}
+
+    /* Hero */
+    .hero{position:relative; overflow:hidden; padding-top:6rem}
+    .hero .container{display:block}
+    .kicker{color:var(--accent); font-weight:900; font-size:clamp(1rem,2.3vw,1.4rem); letter-spacing:.02em; text-align:left}
+    .kicker small{display:block; color:#70757e; font-weight:600}
+    .vr{font-size:clamp(3rem,12vw,7rem); font-weight:900; letter-spacing:.02em; text-align:center}
+    .love{font-size:clamp(1.6rem,3.3vw,2.4rem); font-weight:900; text-align:right}
+    .beauty{font-family: Georgia, "Times New Roman", serif; font-weight:700; font-size:1em; color:var(--teal)}
+
+    .blob{position:absolute; border-radius:999px; mix-blend-mode:multiply; opacity:.95}
+    .b1{width:520px; height:520px; right:-160px; top:-120px; background:var(--peach)}
+    .b3{width:140px; height:140px; left:40px; bottom:60px; background:var(--mint)}
+
+    .lead{max-width:68ch; color:var(--muted); margin-bottom:2rem; text-align:center; margin-left:auto; margin-right:auto}
+
+    .section-title{font-size:clamp(2rem,5vw,3rem); text-align:center; margin-bottom:1rem}
+    .speakers{display:grid; gap:2rem; grid-template-columns:repeat(12,1fr)}
+    .speaker{grid-column:span 6; display:grid; grid-template-columns:140px 1fr; gap:1rem; align-items:start}
+    .avatar{position:relative; width:140px; height:140px}
+    .avatar img{width:100%; height:100%; object-fit:cover; border-radius:999px; border:6px solid #fff; box-shadow:0 10px 30px #00000012}
+    .dot{position:absolute; border-radius:50%}
+    .dot.teal{background:var(--teal); width:68px; height:68px; bottom:-6px; right:-8px}
+    .dot.coral{background:var(--accent); width:54px; height:54px; bottom:12px; left:-10px; opacity:.9}
+    .speaker h3{font-size:1.05rem; line-height:1.35}
+    .underline{height:4px; width:120px; background:var(--accent); border-radius:3px; margin:.5rem 0 .75rem}
+    .speaker p{color:#3c424a}
+    .muted{color:#6b7280}
+    @media (max-width:900px){
+      .speakers{grid-template-columns:repeat(6,1fr)}
+      .speaker{grid-column:span 6; grid-template-columns:120px 1fr}
+      .avatar{width:120px; height:120px}
+    }
+    @media (max-width:640px){
+      .speakers{grid-template-columns:repeat(1,1fr)}
+      .speaker{grid-template-columns:100px 1fr}
+      .avatar{width:100px; height:100px}
+      .kicker{text-align:center}
+      .love{text-align:center}
+    }
+
+    .about h2{font-size:clamp(2rem,5vw,3rem); text-align:center}
+    .gallery{display:grid; grid-template-columns:repeat(12,1fr); gap:.6rem; margin-top:1.2rem}
+    .gallery img{border-radius:10px}
+    .gallery .w6{grid-column:span 6}
+    .gallery .w4{grid-column:span 4}
+    .gallery .w3{grid-column:span 3}
+    @media (max-width:900px){.gallery{grid-template-columns:repeat(6,1fr)} .gallery .w6{grid-column:span 6} .gallery .w4{grid-column:span 3}}
+    @media (max-width:520px){.gallery{grid-template-columns:repeat(2,1fr)} .gallery>*{grid-column:span 1}}
+
+    footer{padding:2rem 1rem; border-top:1px solid var(--ring); color:#6b7280}
+    .foot{max-width:var(--maxw); margin:0 auto; display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap}
+  </style>
+</head>
+<body>
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero">
+      <div class="b1 blob" aria-hidden="true"></div>
+      <div class="b3 blob" aria-hidden="true"></div>
+      <div class="lang-box">
+        <div class="b2" aria-hidden="true"></div>
+        <div class="chip" role="group" aria-label="Taal">
+          <button id="btn-nl" aria-pressed="true">NL</button>
+          <button id="btn-en" aria-pressed="false">EN</button>
+        </div>
+      </div>
+      <div class="container">
+        <div class="kicker">
+          <span class="nl">Katholieke vormingsdag</span>
+          <small class="nl">voor jongeren</small>
+          <span class="en" hidden>Catholic formation day</span>
+          <small class="en" hidden>for youth</small>
+        </div>
+        <h1 class="vr">VIRTUOUS<br/>REALITY</h1>
+        <h2 class="love"><span class="nl">Liefde voor de <span class="beauty">Schoonheid</span></span><span class="en" hidden>Love for <span class="beauty">Beauty</span></span></h2>
+      </div>
+    </section>
+
+    <!-- SPEAKERS -->
+    <section id="sprekers" aria-label="Sprekers">
+      <div class="container">
+        <h2 class="section-title">Speakers</h2>
+        <p class="lead nl">Ontdek de diepe kracht van schoonheid. Vanuit christelijk perspectief verkennen we de band tussen schoonheid, goedheid en waarheid — en hoe dit onze blik op onszelf, elkaar en God opent.</p>
+        <p class="lead en" hidden>Discover the profound power of beauty. From a Christian perspective, we explore how beauty is connected to goodness and truth—and how this opens our eyes to ourselves, others, and God.</p>
+
+        <div class="speakers">
+          <article class="speaker">
+            <div class="avatar">
+              <img alt="Prof. Andrea Robiglio" src="images/robiglio.jpg" loading="lazy" />
+              <span class="dot teal" aria-hidden="true"></span>
+              <span class="dot coral" aria-hidden="true"></span>
+            </div>
+            <div>
+              <h3 class="nl">Wat is schoonheid? Schoonheid in de oudheid, de middeleeuwen en de renaissance</h3>
+              <h3 class="en" hidden>What is Beauty? Beauty in Ancient, Medieval and Renaissance times</h3>
+              <div class="underline" aria-hidden="true"></div>
+              <p class="nl"><strong>Prof. Andrea Robiglio</strong> is professor in de geschiedenis van de middeleeuwse en renaissancistische filosofie, gespecialiseerd in filosofische antropologie, ethiek en politiek (12e–17e eeuw).</p>
+              <p class="en" hidden><strong>Prof. Andrea Robiglio</strong> is Professor of Medieval and Renaissance Philosophy, specialising in philosophical anthropology, ethics and politics (12th–17th c.).</p>
+            </div>
+          </article>
+
+          <article class="speaker">
+            <div class="avatar">
+              <img alt="Pr Luc Simons" src="images/simons.jpg" loading="lazy" />
+              <span class="dot teal" aria-hidden="true"></span>
+              <span class="dot coral" aria-hidden="true"></span>
+            </div>
+            <div>
+              <h3 class="nl">Zuiverheid en schoonheid in het licht van de theologie van het lichaam</h3>
+              <h3 class="en" hidden>Purity and Beauty in the Light of the Theology of the Body</h3>
+              <div class="underline" aria-hidden="true"></div>
+              <p class="nl"><strong>Pr Luc Simons</strong> is priester van het bisdom Roermond met bijzondere aandacht voor pastorale zorg rond gezinnen en het gedachtegoed van H. Johannes Paulus II.</p>
+              <p class="en" hidden><strong>Fr. Luc Simons</strong> is a priest of the Diocese of Roermond with a special focus on pastoral care for families and the teaching of St John Paul II on the body and sexuality.</p>
+            </div>
+          </article>
+
+          <article class="speaker">
+            <div class="avatar">
+              <img alt="Dr. Gudrun Kugler" src="images/kugler.jpg" loading="lazy" />
+              <span class="dot teal" aria-hidden="true"></span>
+              <span class="dot coral" aria-hidden="true"></span>
+            </div>
+            <div>
+              <h3 class="nl">Waarom schoonheid belangrijk is: gezinsleven & persoonlijke groei</h3>
+              <h3 class="en" hidden>Why Beauty Matters: family life & personal growth</h3>
+              <div class="underline" aria-hidden="true"></div>
+              <p class="nl"><strong>Dr. Gudrun Kugler</strong> is Oostenrijkse politica, theoloog en jurist. Zet zich in voor mensenrechten en religieuze vrijheid; actief tegen mensenhandel en vervolging van gelovigen.</p>
+              <p class="en" hidden><strong>Dr. Gudrun Kugler</strong> is an Austrian politician, theologian and lawyer working for human rights and religious freedom; active against human trafficking and the persecution of believers.</p>
+            </div>
+          </article>
+
+          <article class="speaker">
+            <div class="avatar">
+              <img alt="Pr Jean Paul Hernandez" src="images/hernandez.jpg" loading="lazy" />
+              <span class="dot teal" aria-hidden="true"></span>
+              <span class="dot coral" aria-hidden="true"></span>
+            </div>
+            <div>
+              <h3 class="nl">Schoonheid als weg naar God</h3>
+              <h3 class="en" hidden>Beauty as a Path to God</h3>
+              <div class="underline" aria-hidden="true"></div>
+              <p class="nl"><strong>Pr Jean Paul Hernandez</strong>, jezuïet en theoloog, oprichter van Living Stones. Docent theologie in Napels, begeleidt een internationale beweging die kunst inzet om Gods liefde te verkondigen.</p>
+              <p class="en" hidden><strong>Fr. Jean Paul Hernandez</strong>, Jesuit and theologian, founder of Living Stones; theology lecturer in Naples, guiding an international movement using art to proclaim God’s love.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="over-ons" class="about" aria-label="Over ons">
+      <div class="container">
+        <h2>About us</h2>
+        <p class="lead nl">Het initiatief <strong>Vormingsdagen</strong> komt van een groep jongeren die vorming zoeken in hun katholieke geloof. Zij willen studenten en young professionals samenbrengen en vorming aanbieden in dienst van de Kerk, trouw aan Haar intellectuele traditie.</p>
+        <p class="lead en" hidden>The initiative <strong>Vormingsdagen</strong> comes from a group of young people seeking formation in their Catholic faith. They wish to bring students and young professionals together to offer formation in the service of the Church, faithful to Her intellectual tradition.</p>
+        <div class="gallery" aria-label="Fotogalerij">
+          <img class="w6" alt="gallery" loading="lazy" src="images/g1.jpg" />
+          <img class="w6" alt="gallery" loading="lazy" src="images/g2.jpg" />
+          <img class="w4" alt="gallery" loading="lazy" src="images/g3.jpg" />
+          <img class="w3" alt="gallery" loading="lazy" src="images/g4.jpg" />
+          <img class="w3" alt="gallery" loading="lazy" src="images/g5.jpg" />
+          <img class="w4" alt="gallery" loading="lazy" src="images/g6.jpg" />
+          <img class="w4" alt="gallery" loading="lazy" src="images/g7.jpg" />
+          <img class="w6" alt="gallery" loading="lazy" src="images/g8.jpg" />
+          <img class="w6" alt="gallery" loading="lazy" src="images/g9.jpg" />
+          <img class="w6" alt="gallery" loading="lazy" src="images/g10.jpg" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="foot">
+      <div>© <span id="year"></span> Virtuous Reality</div>
+      <div>Statische recreatie zonder frameworks of externe JS/CSS. Ticketknoppen en contactformulier zijn verwijderd.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Language toggle
+    const nlBtn = document.getElementById('btn-nl');
+    const enBtn = document.getElementById('btn-en');
+    function setLang(lang){
+      const show = lang;
+      const hide = lang==='nl' ? 'en' : 'nl';
+      document.querySelectorAll('.'+show).forEach(el=>el.hidden=false);
+      document.querySelectorAll('.'+hide).forEach(el=>el.hidden=true);
+      nlBtn.setAttribute('aria-pressed', String(lang==='nl'));
+      enBtn.setAttribute('aria-pressed', String(lang==='en'));
+      document.documentElement.lang = lang;
+    }
+    nlBtn.addEventListener('click',()=>setLang('nl'));
+    enBtn.addEventListener('click',()=>setLang('en'));
+  </script>
+</body>
+</html>
