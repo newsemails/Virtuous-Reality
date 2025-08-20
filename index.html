@@ -49,7 +49,7 @@
     .avatar{position:relative; width:140px; height:140px}
     .avatar img{width:100%; height:100%; object-fit:cover; border-radius:999px; border:6px solid #fff; box-shadow:0 10px 30px #00000012}
     .dot{position:absolute; border-radius:50%}
-    .dot.teal{background:var(--teal); width:68px; height:68px; bottom:-6px; right:-8px}
+    .dot.teal{background:var(--teal); width:68px; height:68px; bottom:-6px; right:-8px; z-index: -1;}
     .dot.coral{background:var(--accent); width:54px; height:54px; bottom:12px; left:-10px; opacity:.9}
     .speaker h3{font-size:1.05rem; line-height:1.35}
     .underline{height:4px; width:120px; background:var(--accent); border-radius:3px; margin:.5rem 0 .75rem}
@@ -77,8 +77,6 @@
     @media (max-width:900px){.gallery{grid-template-columns:repeat(6,1fr)} .gallery .w6{grid-column:span 6} .gallery .w4{grid-column:span 3}}
     @media (max-width:520px){.gallery{grid-template-columns:repeat(2,1fr)} .gallery>*{grid-column:span 1}}
 
-    footer{padding:2rem 1rem; border-top:1px solid var(--ring); color:#6b7280}
-    .foot{max-width:var(--maxw); margin:0 auto; display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap}
   </style>
 </head>
 <body>
@@ -102,7 +100,7 @@
           <small class="en" hidden>for youth</small>
         </div>
         <h1 class="vr">VIRTUOUS<br/>REALITY</h1>
-        <h2 class="love"><span class="nl">Liefde voor de <span class="beauty">Schoonheid</span></span><span class="en" hidden>Love for <span class="beauty">Beauty</span></span></h2>
+        <h2 class="love"><span class="nl">Liefde voor de<br/> <span class="beauty">Schoonheid</span></span><span class="en" hidden>Love for <span class="beauty">Beauty</span></span></h2>
       </div>
     </section>
 
@@ -110,13 +108,13 @@
     <section id="sprekers" aria-label="Sprekers">
       <div class="container">
         <h2 class="section-title">Speakers</h2>
-        <p class="lead nl">Ontdek de diepe kracht van schoonheid. Vanuit christelijk perspectief verkennen we de band tussen schoonheid, goedheid en waarheid — en hoe dit onze blik op onszelf, elkaar en God opent.</p>
+        <p class="lead nl">Ontdek de diepe kracht van schoonheid op onze vormingsdag! Schoonheid is niet enkel wat we zien, maar ook wat we ervaren en voelen in de wereld om ons heen. Vanuit een christelijk perspectief duiken we in hoe schoonheid verbonden is met goedheid en waarheid, en hoe het ons kan leiden naar een dieper begrip van onszelf, anderen en God. Laat je inspireren door inzichten die je ogen openen voor de schoonheid in het alledaagse én het buitengewone. Samen verkennen we hoe schoonheid ons vrijmaakt en waarom ze, zoals Dostojevski zegt, de wereld kan redden. Kom en laat je verrassen!</p>
         <p class="lead en" hidden>Discover the profound power of beauty. From a Christian perspective, we explore how beauty is connected to goodness and truth—and how this opens our eyes to ourselves, others, and God.</p>
 
         <div class="speakers">
           <article class="speaker">
             <div class="avatar">
-              <img alt="Prof. Andrea Robiglio" src="images/robiglio.jpg" loading="lazy" />
+              <img alt="Prof. Andrea Robiglio" src="Speakers/2024/Andrea.jpg.avif" loading="lazy" />
               <span class="dot teal" aria-hidden="true"></span>
               <span class="dot coral" aria-hidden="true"></span>
             </div>
@@ -124,14 +122,19 @@
               <h3 class="nl">Wat is schoonheid? Schoonheid in de oudheid, de middeleeuwen en de renaissance</h3>
               <h3 class="en" hidden>What is Beauty? Beauty in Ancient, Medieval and Renaissance times</h3>
               <div class="underline" aria-hidden="true"></div>
-              <p class="nl"><strong>Prof. Andrea Robiglio</strong> is professor in de geschiedenis van de middeleeuwse en renaissancistische filosofie, gespecialiseerd in filosofische antropologie, ethiek en politiek (12e–17e eeuw).</p>
-              <p class="en" hidden><strong>Prof. Andrea Robiglio</strong> is Professor of Medieval and Renaissance Philosophy, specialising in philosophical anthropology, ethics and politics (12th–17th c.).</p>
+              <div class="nl">
+                <p>Prof <strong>Andrea Robiglio</strong> is professor in de geschiedenis van de middeleeuwse en renaissancistische filosofie, met een specialisatie in filosofische antropologie, ethiek en politiek van de 12e tot de 17e eeuw.</p>
+                <p>Zijn onderzoek gaat ook dieper in op de geschiedenis van de filosofische historiografie, met name in de 20e eeuw, en de relatie tussen filosofie en literatuur.</p>
+              </div>
+              <div class="en">
+                <p hidden><strong>Prof. Andrea Robiglio</strong> is Professor of Medieval and Renaissance Philosophy, specialising in philosophical anthropology, ethics and politics (12th–17th c.).</p>
+              </div>
             </div>
           </article>
 
           <article class="speaker">
             <div class="avatar">
-              <img alt="Pr Luc Simons" src="images/simons.jpg" loading="lazy" />
+              <img alt="Pr Luc Simons" src="Speakers/2024/Luc.jpg.avif" loading="lazy" />
               <span class="dot teal" aria-hidden="true"></span>
               <span class="dot coral" aria-hidden="true"></span>
             </div>
@@ -139,14 +142,17 @@
               <h3 class="nl">Zuiverheid en schoonheid in het licht van de theologie van het lichaam</h3>
               <h3 class="en" hidden>Purity and Beauty in the Light of the Theology of the Body</h3>
               <div class="underline" aria-hidden="true"></div>
-              <p class="nl"><strong>Pr Luc Simons</strong> is priester van het bisdom Roermond met bijzondere aandacht voor pastorale zorg rond gezinnen en het gedachtegoed van H. Johannes Paulus II.</p>
+              <div class="nl">
+                <p>Pr <strong>Luc Simons</strong> is priester van het bisdom Roermond in Nederland. Hij heeft een bijzondere aandacht voor de pastorale zorg rond gezinnen en het bekendmaken van het gedachtengoed van de heilige paus Johannes Paulus II over lichamelijkheid en seksualiteit (Theologie van het Lichaam).</p>
+                <p>Hij behaalde een Master ‘Marriage and Family’ en een Licentiaat in de theologie aan het Internationaal Theologisch Instituut in Oostenrijk.</p>
+              </div>
               <p class="en" hidden><strong>Fr. Luc Simons</strong> is a priest of the Diocese of Roermond with a special focus on pastoral care for families and the teaching of St John Paul II on the body and sexuality.</p>
             </div>
           </article>
 
           <article class="speaker">
             <div class="avatar">
-              <img alt="Dr. Gudrun Kugler" src="images/kugler.jpg" loading="lazy" />
+              <img alt="Dr. Gudrun Kugler" src="Speakers/2024/gudrun-kugler.jpg.avif" loading="lazy" />
               <span class="dot teal" aria-hidden="true"></span>
               <span class="dot coral" aria-hidden="true"></span>
             </div>
@@ -154,14 +160,14 @@
               <h3 class="nl">Waarom schoonheid belangrijk is: gezinsleven & persoonlijke groei</h3>
               <h3 class="en" hidden>Why Beauty Matters: family life & personal growth</h3>
               <div class="underline" aria-hidden="true"></div>
-              <p class="nl"><strong>Dr. Gudrun Kugler</strong> is Oostenrijkse politica, theoloog en jurist. Zet zich in voor mensenrechten en religieuze vrijheid; actief tegen mensenhandel en vervolging van gelovigen.</p>
+              <p class="nl">Dr. <strong>Gudrun Kugler</strong> is een Oostenrijkse politica, theoloog en jurist, die momenteel als lid van de Nationale Raad van Oostenrijk dient. Ze is een prominente voorvechtster voor pro-life-kwesties en de bescherming van het traditionele huwelijk. Kugler heeft ook een groot deel van haar werk gewijd aan het bestrijden van mensenhandel, het verzet tegen de doodstraf en het verdedigen van religieuze vrijheid. Ze is een uitgesproken voorstander van de bestrijding van discriminatie en vervolging van Christenen en andere geloofsgroepen, zowel in Europa als wereldwijd.</p>
               <p class="en" hidden><strong>Dr. Gudrun Kugler</strong> is an Austrian politician, theologian and lawyer working for human rights and religious freedom; active against human trafficking and the persecution of believers.</p>
             </div>
           </article>
 
           <article class="speaker">
             <div class="avatar">
-              <img alt="Pr Jean Paul Hernandez" src="images/hernandez.jpg" loading="lazy" />
+              <img alt="Pr Jean Paul Hernandez" src="Speakers/2024/jean-paul-hernandez.jpg.avif" loading="lazy" />
               <span class="dot teal" aria-hidden="true"></span>
               <span class="dot coral" aria-hidden="true"></span>
             </div>
@@ -169,7 +175,7 @@
               <h3 class="nl">Schoonheid als weg naar God</h3>
               <h3 class="en" hidden>Beauty as a Path to God</h3>
               <div class="underline" aria-hidden="true"></div>
-              <p class="nl"><strong>Pr Jean Paul Hernandez</strong>, jezuïet en theoloog, oprichter van Living Stones. Docent theologie in Napels, begeleidt een internationale beweging die kunst inzet om Gods liefde te verkondigen.</p>
+              <p class="nl">Pr Jean Paul Hernandez is Jezuïet en theoloog, geboren in Zwitserland uit een familie van Spaanse afkomst. Geïnspireerd door paus Johannes Paulus II en de geschriften van St. Ignatius van Loyola, volgde hij zijn roeping. Hij is vooral bekend als de oprichter van “Living Stones”, dat kunst en architectuur inzet om de onvoorwaardelijke liefde van God te verkondigen. Momenteel geeft hij les in theologie in Napels en blijft hij de beweging begeleiden, die in meer dan 40 steden actief is. Tegelijkertijd zet hij zich met volle overtuiging in voor Ignatiaanse spiritualiteit en de vorming van jongeren.</p>
               <p class="en" hidden><strong>Fr. Jean Paul Hernandez</strong>, Jesuit and theologian, founder of Living Stones; theology lecturer in Naples, guiding an international movement using art to proclaim God’s love.</p>
             </div>
           </article>
@@ -199,16 +205,7 @@
     </section>
   </main>
 
-  <footer>
-    <div class="foot">
-      <div>© <span id="year"></span> Virtuous Reality</div>
-      <div>Statische recreatie zonder frameworks of externe JS/CSS. Ticketknoppen en contactformulier zijn verwijderd.</div>
-    </div>
-  </footer>
-
   <script>
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
     // Language toggle
     const nlBtn = document.getElementById('btn-nl');
     const enBtn = document.getElementById('btn-en');
