@@ -56,6 +56,10 @@
     .underline{height:4px; width:120px; background:var(--accent); border-radius:3px; margin:.5rem 0 .75rem}
     .speaker p{color:#3c424a}
     .muted{color:#6b7280}
+    .tabs{margin-top:2rem;}
+    .tablist{display:flex; justify-content:center; gap:1rem; margin-bottom:2rem;}
+    .tablist button{padding:.5rem 1rem; border:1px solid var(--ring); background:#fff; border-radius:6px; cursor:pointer; font-weight:600;}
+    .tablist button[aria-selected="true"]{background:var(--accent); color:#fff; border-color:var(--accent);}
     @media (max-width:900px){
       .speakers{grid-template-columns:repeat(6,1fr)}
       .speaker{grid-column:span 6; grid-template-columns:120px 1fr}
@@ -128,10 +132,19 @@
       <div class="container">
         <h2 class="section-title nl">Sprekers</h2>
         <h2 class="section-title en" hidden>Speakers</h2>
-        <p class="lead nl">Ontdek de diepe kracht van schoonheid op onze vormingsdag! Schoonheid is niet enkel wat we zien, maar ook wat we ervaren en voelen in de wereld om ons heen. Vanuit een christelijk perspectief duiken we in hoe schoonheid verbonden is met goedheid en waarheid, en hoe het ons kan leiden naar een dieper begrip van onszelf, anderen en God. Laat je inspireren door inzichten die je ogen openen voor de schoonheid in het alledaagse én het buitengewone. Samen verkennen we hoe schoonheid ons vrijmaakt en waarom ze, zoals Dostojevski zegt, de wereld kan redden. Kom en laat je verrassen!</p>
-        <p class="lead en" hidden>Discover the profound power of beauty. From a Christian perspective, we explore how beauty is connected to goodness and truth—and how this opens our eyes to ourselves, others, and God.</p>
 
-        <div class="speakers">
+        <div class="tabs">
+          <div class="tablist" role="tablist">
+            <button id="tab-2024" role="tab" aria-selected="true" aria-controls="panel-2024">2024</button>
+            <button id="tab-2023" role="tab" aria-selected="false" aria-controls="panel-2023">2023</button>
+            <button id="tab-2022" role="tab" aria-selected="false" aria-controls="panel-2022">2022</button>
+          </div>
+
+          <div id="panel-2024" role="tabpanel">
+            <p class="lead nl">Ontdek de diepe kracht van schoonheid op onze vormingsdag! Schoonheid is niet enkel wat we zien, maar ook wat we ervaren en voelen in de wereld om ons heen. Vanuit een christelijk perspectief duiken we in hoe schoonheid verbonden is met goedheid en waarheid, en hoe het ons kan leiden naar een dieper begrip van onszelf, anderen en God. Laat je inspireren door inzichten die je ogen openen voor de schoonheid in het alledaagse én het buitengewone. Samen verkennen we hoe schoonheid ons vrijmaakt en waarom ze, zoals Dostojevski zegt, de wereld kan redden. Kom en laat je verrassen!</p>
+            <p class="lead en" hidden>Discover the profound power of beauty. From a Christian perspective, we explore how beauty is connected to goodness and truth—and how this opens our eyes to ourselves, others, and God.</p>
+
+            <div class="speakers">
           <article class="speaker">
             <div class="avatar">
               <img alt="Prof. Andrea Robiglio" src="Speakers/2024/Andrea.jpg.avif" loading="lazy" />
@@ -198,6 +211,146 @@
             </div>
           </article>
         </div>
+          </div>
+
+          <div id="panel-2023" role="tabpanel" hidden>
+            <div class="speakers">
+              <article class="speaker">
+                <div class="avatar">
+                  <img alt="Placeholder speaker" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" loading="lazy" />
+                  <span class="dot teal" aria-hidden="true"></span>
+                  <span class="dot coral" aria-hidden="true"></span>
+                </div>
+                <div>
+                  <h3 class="nl">Titel spreker</h3>
+                  <h3 class="en" hidden>Speaker title</h3>
+                  <div class="underline" aria-hidden="true"></div>
+                  <div class="nl">
+                    <p>Beschrijving spreker.</p>
+                  </div>
+                  <p class="en" hidden>Speaker description.</p>
+                </div>
+              </article>
+              <article class="speaker">
+                <div class="avatar">
+                  <img alt="Placeholder speaker" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" loading="lazy" />
+                  <span class="dot teal" aria-hidden="true"></span>
+                  <span class="dot coral" aria-hidden="true"></span>
+                </div>
+                <div>
+                  <h3 class="nl">Titel spreker</h3>
+                  <h3 class="en" hidden>Speaker title</h3>
+                  <div class="underline" aria-hidden="true"></div>
+                  <div class="nl">
+                    <p>Beschrijving spreker.</p>
+                  </div>
+                  <p class="en" hidden>Speaker description.</p>
+                </div>
+              </article>
+              <article class="speaker">
+                <div class="avatar">
+                  <img alt="Placeholder speaker" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" loading="lazy" />
+                  <span class="dot teal" aria-hidden="true"></span>
+                  <span class="dot coral" aria-hidden="true"></span>
+                </div>
+                <div>
+                  <h3 class="nl">Titel spreker</h3>
+                  <h3 class="en" hidden>Speaker title</h3>
+                  <div class="underline" aria-hidden="true"></div>
+                  <div class="nl">
+                    <p>Beschrijving spreker.</p>
+                  </div>
+                  <p class="en" hidden>Speaker description.</p>
+                </div>
+              </article>
+              <article class="speaker">
+                <div class="avatar">
+                  <img alt="Placeholder speaker" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" loading="lazy" />
+                  <span class="dot teal" aria-hidden="true"></span>
+                  <span class="dot coral" aria-hidden="true"></span>
+                </div>
+                <div>
+                  <h3 class="nl">Titel spreker</h3>
+                  <h3 class="en" hidden>Speaker title</h3>
+                  <div class="underline" aria-hidden="true"></div>
+                  <div class="nl">
+                    <p>Beschrijving spreker.</p>
+                  </div>
+                  <p class="en" hidden>Speaker description.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div id="panel-2022" role="tabpanel" hidden>
+            <div class="speakers">
+              <article class="speaker">
+                <div class="avatar">
+                  <img alt="Placeholder speaker" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" loading="lazy" />
+                  <span class="dot teal" aria-hidden="true"></span>
+                  <span class="dot coral" aria-hidden="true"></span>
+                </div>
+                <div>
+                  <h3 class="nl">Titel spreker</h3>
+                  <h3 class="en" hidden>Speaker title</h3>
+                  <div class="underline" aria-hidden="true"></div>
+                  <div class="nl">
+                    <p>Beschrijving spreker.</p>
+                  </div>
+                  <p class="en" hidden>Speaker description.</p>
+                </div>
+              </article>
+              <article class="speaker">
+                <div class="avatar">
+                  <img alt="Placeholder speaker" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" loading="lazy" />
+                  <span class="dot teal" aria-hidden="true"></span>
+                  <span class="dot coral" aria-hidden="true"></span>
+                </div>
+                <div>
+                  <h3 class="nl">Titel spreker</h3>
+                  <h3 class="en" hidden>Speaker title</h3>
+                  <div class="underline" aria-hidden="true"></div>
+                  <div class="nl">
+                    <p>Beschrijving spreker.</p>
+                  </div>
+                  <p class="en" hidden>Speaker description.</p>
+                </div>
+              </article>
+              <article class="speaker">
+                <div class="avatar">
+                  <img alt="Placeholder speaker" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" loading="lazy" />
+                  <span class="dot teal" aria-hidden="true"></span>
+                  <span class="dot coral" aria-hidden="true"></span>
+                </div>
+                <div>
+                  <h3 class="nl">Titel spreker</h3>
+                  <h3 class="en" hidden>Speaker title</h3>
+                  <div class="underline" aria-hidden="true"></div>
+                  <div class="nl">
+                    <p>Beschrijving spreker.</p>
+                  </div>
+                  <p class="en" hidden>Speaker description.</p>
+                </div>
+              </article>
+              <article class="speaker">
+                <div class="avatar">
+                  <img alt="Placeholder speaker" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" loading="lazy" />
+                  <span class="dot teal" aria-hidden="true"></span>
+                  <span class="dot coral" aria-hidden="true"></span>
+                </div>
+                <div>
+                  <h3 class="nl">Titel spreker</h3>
+                  <h3 class="en" hidden>Speaker title</h3>
+                  <div class="underline" aria-hidden="true"></div>
+                  <div class="nl">
+                    <p>Beschrijving spreker.</p>
+                  </div>
+                  <p class="en" hidden>Speaker description.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -254,6 +407,16 @@
     }
     nlBtn.addEventListener('click',()=>setLang('nl'));
     enBtn.addEventListener('click',()=>setLang('en'));
+    // Year tabs
+    const tabs = document.querySelectorAll('#sprekers [role="tab"]');
+    const panels = document.querySelectorAll('#sprekers [role="tabpanel"]');
+    tabs.forEach(tab=>{
+      tab.addEventListener('click', ()=>{
+        const target = tab.getAttribute('aria-controls');
+        tabs.forEach(t=>t.setAttribute('aria-selected', String(t===tab)));
+        panels.forEach(panel=>{panel.hidden = panel.id !== target;});
+      });
+    });
   </script>
 </body>
 </html>
