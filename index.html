@@ -23,7 +23,7 @@
     
     /* Language toggle inside hero, blob perfectly centered behind */
     .lang-box{position:absolute; top:1rem; right:1rem; display:inline-flex; align-items:center; justify-content:center}
-    .b2{position:absolute; top:50%; left:50%; width:220px; height:220px; background:var(--mint); border-radius:50%; transform:translate(-50%,-50%); z-index:-2}
+    .b2{position:absolute; top:50%; left:50%; width:220px; height:220px; background:var(--mint); border-radius:50%; z-index:-2; --x:-50%; --y:-50%; --dx:-10px; --dy:10px}
     .chip{display:inline-flex; align-items:center; gap:.35rem; padding:.2rem; background:#fff; border:1px solid var(--ring); border-radius:999px; position:relative; z-index:1; box-shadow:0 4px 12px #00000018}
     .chip button{border:0; background:transparent; padding:.35rem .7rem; border-radius:999px; font-weight:700; cursor:pointer}
     .chip button[aria-pressed="true"]{background:#f6f7f8; border:1px solid var(--ring)}
@@ -38,9 +38,10 @@
     h2.catholicformation small { vertical-align: top; }
     .vr{font-size:clamp(3rem,12vw,7rem); font-weight:900; letter-spacing:.02em; text-align:center; position: relative;}
     
-    .blob{position:absolute; border-radius:999px; mix-blend-mode:multiply; opacity:.95}
-    .b1{width:40vw; height:40vw; right:-25vw; bottom:0; background:var(--peach); z-index: -1;}
-    .b3{width:140px; height:140px; left:40px; bottom:60px; background:var(--mint)}
+    .blob{position:absolute; border-radius:999px; mix-blend-mode:multiply; opacity:.95; --x:0; --y:0; --dx:15px; --dy:-15px; animation:blob-float 30s ease-in-out infinite}
+    @keyframes blob-float{0%,100%{transform:translate(var(--x),var(--y))}50%{transform:translate(calc(var(--x) + var(--dx)),calc(var(--y) + var(--dy)))} }
+    .b1{width:40vw; height:40vw; right:-25vw; bottom:0; background:var(--peach); z-index:-1; --dx:20px; --dy:-10px}
+    .b3{width:140px; height:140px; left:40px; bottom:60px; background:var(--mint); --dx:10px; --dy:8px}
     
     .lead{max-width:68ch; color:var(--muted); text-align:center; margin-left:auto; margin-right:auto}
     
