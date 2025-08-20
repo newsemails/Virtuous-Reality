@@ -70,13 +70,10 @@
     }
 
     .about h2{font-size:clamp(2rem,5vw,3rem); text-align:center}
-    .gallery{display:grid; grid-template-columns:repeat(12,1fr); gap:.6rem; margin-top:1.2rem}
-    .gallery img{border-radius:10px}
-    .gallery .w6{grid-column:span 6}
-    .gallery .w4{grid-column:span 4}
-    .gallery .w3{grid-column:span 3}
-    @media (max-width:900px){.gallery{grid-template-columns:repeat(6,1fr)} .gallery .w6{grid-column:span 6} .gallery .w4{grid-column:span 3}}
-    @media (max-width:520px){.gallery{grid-template-columns:repeat(2,1fr)} .gallery>*{grid-column:span 1}}
+    .gallery{max-width:1200px;margin:20px auto;padding:0 12px;}
+    .gallery .row{display:flex;gap:12px;margin-bottom:12px;align-items:center}
+    .gallery .item{flex-grow:1;flex-basis:0;display:flex}
+    .gallery .item img{width:100%;height:auto;display:block; border-radius:8px;box-shadow:0 2px 5px rgba(0,0,0,.15)}
 
   </style>
 </head>
@@ -119,7 +116,8 @@
     <!-- SPEAKERS -->
     <section id="sprekers" aria-label="Sprekers">
       <div class="container">
-        <h2 class="section-title">Speakers</h2>
+        <h2 class="section-title nl">Sprekers</h2>
+        <h2 class="section-title en" hidden>Speakers</h2>
         <p class="lead nl">Ontdek de diepe kracht van schoonheid op onze vormingsdag! Schoonheid is niet enkel wat we zien, maar ook wat we ervaren en voelen in de wereld om ons heen. Vanuit een christelijk perspectief duiken we in hoe schoonheid verbonden is met goedheid en waarheid, en hoe het ons kan leiden naar een dieper begrip van onszelf, anderen en God. Laat je inspireren door inzichten die je ogen openen voor de schoonheid in het alledaagse én het buitengewone. Samen verkennen we hoe schoonheid ons vrijmaakt en waarom ze, zoals Dostojevski zegt, de wereld kan redden. Kom en laat je verrassen!</p>
         <p class="lead en" hidden>Discover the profound power of beauty. From a Christian perspective, we explore how beauty is connected to goodness and truth—and how this opens our eyes to ourselves, others, and God.</p>
 
@@ -202,17 +200,36 @@
         <h2 class="en" hidden>About us</h2>
         <p class="lead nl">Het initiatief <strong>Vormingsdagen</strong> gaat uit van een groep jongeren op zoek naar vorming van hun katholiek geloof. Zij stellen zich in dienst van de Kerk en willen trouw aan Haar intellectuele traditie jongeren samen brengen en vorming aanbieden.</p>
         <p class="lead en" hidden>The initiative <strong>Vormingsdagen</strong> comes from a group of young people seeking formation in their Catholic faith. They wish to bring students and young professionals together to offer formation in the service of the Church, faithful to Her intellectual tradition.</p>
-        <div class="gallery" aria-label="Fotogalerij">
-          <img class="w6" alt="gallery" loading="lazy" src="images/g1.jpg" />
-          <img class="w6" alt="gallery" loading="lazy" src="images/g2.jpg" />
-          <img class="w4" alt="gallery" loading="lazy" src="images/g3.jpg" />
-          <img class="w3" alt="gallery" loading="lazy" src="images/g4.jpg" />
-          <img class="w3" alt="gallery" loading="lazy" src="images/g5.jpg" />
-          <img class="w4" alt="gallery" loading="lazy" src="images/g6.jpg" />
-          <img class="w4" alt="gallery" loading="lazy" src="images/g7.jpg" />
-          <img class="w6" alt="gallery" loading="lazy" src="images/g8.jpg" />
-          <img class="w6" alt="gallery" loading="lazy" src="images/g9.jpg" />
-          <img class="w6" alt="gallery" loading="lazy" src="images/g10.jpg" />
+        <div class="gallery">
+          <div class="row">
+            <div class="item" style="flex-grow:0.27292"><img src="./Pictures/01.avif" alt=""></div>
+            <div class="item" style="flex-grow:0.35417"><img src="./Pictures/02.avif" alt=""></div>
+            <div class="item" style="flex-grow:0.37292"><img src="./Pictures/03.avif" alt=""></div>
+          </div>
+          <div class="row">
+            <div class="item" style="flex-grow:0.36146"><img src="./Pictures/04.avif" alt=""></div>
+            <div class="item" style="flex-grow:0.31875"><img src="./Pictures/05.avif" alt=""></div>
+            <div class="item" style="flex-grow:0.31979"><img src="./Pictures/06.avif" alt=""></div>
+          </div>
+          <div class="row">
+            <div class="item" style="flex-grow:0.31875"><img src="./Pictures/07.avif" alt=""></div>
+            <div class="item" style="flex-grow:0.31875"><img src="./Pictures/08.avif" alt=""></div>
+            <div class="item" style="flex-grow:0.36250"><img src="./Pictures/09.avif" alt=""></div>
+          </div>
+          <div class="row">
+            <div class="item" style="flex-grow:0.35104"><img src="./Pictures/10.avif" alt=""></div>
+            <div class="item" style="flex-grow:0.32396"><img src="./Pictures/11.avif" alt=""></div>
+            <div class="item" style="flex-grow:0.32500"><img src="./Pictures/12.avif" alt=""></div>
+          </div>
+          <div class="row">
+            <div class="item" style="flex-grow:0.32292"><img src="./Pictures/13.avif" alt=""></div>
+            <div class="item" style="flex-grow:0.35417"><img src="./Pictures/14.avif" alt=""></div>
+            <div class="item" style="flex-grow:0.32292"><img src="./Pictures/15.avif" alt=""></div>
+          </div>
+          <div class="row">
+            <div class="item" style="flex-grow:0.57423"><img src="./Pictures/16.avif" alt=""></div>
+            <div class="item" style="flex-grow:0.42577"><img src="./Pictures/17.avif" alt=""></div>
+          </div>
         </div>
       </div>
     </section>
