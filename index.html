@@ -23,7 +23,7 @@
 
     /* Language toggle inside hero, blob perfectly centered behind */
     .lang-box{position:absolute; top:1rem; right:1rem; display:inline-flex; align-items:center; justify-content:center}
-    .b2{position:absolute; top:50%; left:50%; width:220px; height:220px; background:var(--mint); border-radius:50%; transform:translate(-50%,-50%); z-index:-1}
+    .b2{position:absolute; top:50%; left:50%; width:220px; height:220px; background:var(--mint); border-radius:50%; transform:translate(-50%,-50%); z-index:-2}
     .chip{display:inline-flex; align-items:center; gap:.35rem; padding:.2rem; background:#fff; border:1px solid var(--ring); border-radius:999px; position:relative; z-index:1; box-shadow:0 4px 12px #00000018}
     .chip button{border:0; background:transparent; padding:.35rem .7rem; border-radius:999px; font-weight:700; cursor:pointer}
     .chip button[aria-pressed="true"]{background:#f6f7f8; border:1px solid var(--ring)}
@@ -31,18 +31,18 @@
     /* Hero */
     .hero{position:relative; overflow:hidden; padding-top:6rem}
     .hero .container{display:block}
-    h2 { font-size: clamp(2.5rem, 5vw, 5rem); font-family: Georgia, "Times New Roman", serif; font-weight:700;}
+    h2 { font-size: clamp(2.5rem, 5vw, 5rem); font-family: Georgia, "Times New Roman", serif; font-weight:700; }
     h2 small { color: var(--ink); font-size: clamp(2rem, 2.5vw, 4rem); font-weight: 400; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;}
     h2.foryouth { text-align: right; color: var(--teal); }
     h2.catholicformation { color: var(--accent); }
     h2.catholicformation small { vertical-align: top; }
-    .vr{font-size:clamp(3rem,12vw,7rem); font-weight:900; letter-spacing:.02em; text-align:center}
+    .vr{font-size:clamp(3rem,12vw,7rem); font-weight:900; letter-spacing:.02em; text-align:center; position: relative;}
 
     .blob{position:absolute; border-radius:999px; mix-blend-mode:multiply; opacity:.95}
-    .b1{width:520px; height:520px; right:-160px; top:-120px; background:var(--peach)}
+    .b1{width:40vw; height:40vw; right:-25vw; bottom:0; background:var(--peach); z-index: -1;}
     .b3{width:140px; height:140px; left:40px; bottom:60px; background:var(--mint)}
 
-    .lead{max-width:68ch; color:var(--muted); margin-bottom:2rem; text-align:center; margin-left:auto; margin-right:auto}
+    .lead{max-width:68ch; color:var(--muted); margin-bottom:5rem; text-align:center; margin-left:auto; margin-right:auto}
 
     .section-title{font-size:clamp(2rem,5vw,3rem); text-align:center; margin-bottom:1rem}
     .speakers{display:grid; gap:2rem; grid-template-columns:repeat(12,1fr)}
@@ -84,7 +84,6 @@
   <main id="top">
     <!-- HERO -->
     <section class="hero" aria-label="Hero">
-      <div class="b1 blob" aria-hidden="true"></div>
       <div class="b3 blob" aria-hidden="true"></div>
       <div class="lang-box">
         <div class="b2" aria-hidden="true"></div>
@@ -102,7 +101,10 @@
             Catholic<br/><small>formation day</small>
           </span>
         </h2>
-        <h1 class="vr">VIRTUOUS<br/>REALITY</h1>
+        <h1 class="vr">
+          VIRTUOUS<br/>REALITY
+          <div class="b1 blob" aria-hidden="true"></div>
+        </h1>
         <h2 class="foryouth">
           <span class="nl">
             <small>voor</small><br/>Jongeren
