@@ -31,11 +31,12 @@
     /* Hero */
     .hero{position:relative; overflow:hidden; padding-top:6rem}
     .hero .container{display:block}
-    .kicker{color:var(--accent); font-weight:900; font-size:clamp(1rem,2.3vw,1.4rem); letter-spacing:.02em; text-align:left}
-    .kicker small{display:block; color:#70757e; font-weight:600}
+    h2 { font-size: clamp(2.5rem, 5vw, 5rem); font-family: Georgia, "Times New Roman", serif; font-weight:700;}
+    h2 small { color: var(--ink); font-size: clamp(2rem, 2.5vw, 4rem); font-weight: 400; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;}
+    h2.foryouth { text-align: right; color: var(--teal); }
+    h2.catholicformation { color: var(--accent); }
+    h2.catholicformation small { vertical-align: top; }
     .vr{font-size:clamp(3rem,12vw,7rem); font-weight:900; letter-spacing:.02em; text-align:center}
-    .love{font-size:clamp(1.6rem,3.3vw,2.4rem); font-weight:900; text-align:right}
-    .beauty{font-family: Georgia, "Times New Roman", serif; font-weight:700; font-size:1em; color:var(--teal)}
 
     .blob{position:absolute; border-radius:999px; mix-blend-mode:multiply; opacity:.95}
     .b1{width:520px; height:520px; right:-160px; top:-120px; background:var(--peach)}
@@ -93,14 +94,23 @@
         </div>
       </div>
       <div class="container">
-        <div class="kicker">
-          <span class="nl">Katholieke vormingsdag</span>
-          <small class="nl">voor jongeren</small>
-          <span class="en" hidden>Catholic formation day</span>
-          <small class="en" hidden>for youth</small>
-        </div>
+        <h2 class="catholicformation">
+          <span class="nl">
+            Katholieke<br/><small>vormingsdag</small>
+          </span>
+          <span class="en" hidden>
+            Catholic<br/><small>formation day</small>
+          </span>
+        </h2>
         <h1 class="vr">VIRTUOUS<br/>REALITY</h1>
-        <h2 class="love"><span class="nl">Liefde voor de<br/> <span class="beauty">Schoonheid</span></span><span class="en" hidden>Love for <span class="beauty">Beauty</span></span></h2>
+        <h2 class="foryouth">
+          <span class="nl">
+            <small>voor</small><br/>Jongeren
+          </span>
+          <span class="en" hidden>
+            <small>for</small><br/>Youth
+          </span>
+        </h2>
       </div>
     </section>
 
