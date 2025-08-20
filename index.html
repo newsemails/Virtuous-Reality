@@ -20,14 +20,14 @@
     a{color:inherit}
     section{padding:3rem 1rem}
     .container{max-width:var(--maxw); margin:0 auto}
-
+    
     /* Language toggle inside hero, blob perfectly centered behind */
     .lang-box{position:absolute; top:1rem; right:1rem; display:inline-flex; align-items:center; justify-content:center}
     .b2{position:absolute; top:50%; left:50%; width:220px; height:220px; background:var(--mint); border-radius:50%; transform:translate(-50%,-50%); z-index:-2}
     .chip{display:inline-flex; align-items:center; gap:.35rem; padding:.2rem; background:#fff; border:1px solid var(--ring); border-radius:999px; position:relative; z-index:1; box-shadow:0 4px 12px #00000018}
     .chip button{border:0; background:transparent; padding:.35rem .7rem; border-radius:999px; font-weight:700; cursor:pointer}
     .chip button[aria-pressed="true"]{background:#f6f7f8; border:1px solid var(--ring)}
-
+    
     /* Hero */
     .hero{position:relative; overflow:hidden; padding-top:6rem}
     .hero .container{display:block}
@@ -37,13 +37,13 @@
     h2.catholicformation { color: var(--accent); }
     h2.catholicformation small { vertical-align: top; }
     .vr{font-size:clamp(3rem,12vw,7rem); font-weight:900; letter-spacing:.02em; text-align:center; position: relative;}
-
+    
     .blob{position:absolute; border-radius:999px; mix-blend-mode:multiply; opacity:.95}
     .b1{width:40vw; height:40vw; right:-25vw; bottom:0; background:var(--peach); z-index: -1;}
     .b3{width:140px; height:140px; left:40px; bottom:60px; background:var(--mint)}
-
+    
     .lead{max-width:68ch; color:var(--muted); text-align:center; margin-left:auto; margin-right:auto}
-
+    
     .section-title{font-size:clamp(2rem,5vw,3rem); text-align:center; margin-bottom:1rem}
     .speakers{display:grid; gap:2rem; grid-template-columns:repeat(12,1fr); margin-top: 5rem;}
     .speaker{grid-column:span 6; display:grid; grid-template-columns:140px 1fr; gap:1rem; align-items:start}
@@ -56,6 +56,10 @@
     .underline{height:4px; width:120px; background:var(--accent); border-radius:3px; margin:.5rem 0 .75rem}
     .speaker p{color:#3c424a}
     .muted{color:#6b7280}
+    .tabs{margin-top:2rem;}
+    .tablist{display:flex; justify-content:center; gap:1rem; margin-bottom:2rem;}
+    .tablist button{padding:.5rem 1rem; border:1px solid var(--ring); background:#fff; border-radius:6px; cursor:pointer; font-weight:600;}
+    .tablist button[aria-selected="true"]{background:var(--accent); color:#fff; border-color:var(--accent);}
     @media (max-width:900px){
       .speakers{grid-template-columns:repeat(6,1fr)}
       .speaker{grid-column:span 6; grid-template-columns:120px 1fr}
@@ -68,13 +72,13 @@
       .kicker{text-align:center}
       .love{text-align:center}
     }
-
+    
     .about h2{font-size:clamp(2rem,5vw,3rem); text-align:center}
     .gallery{max-width:1200px;margin:20px auto;padding:0 12px;}
     .gallery .row{display:flex;gap:12px;margin-bottom:12px;align-items:center}
     .gallery .item{flex-grow:1;flex-basis:0;display:flex}
     .gallery .item img{width:100%;height:auto;display:block; border-radius:8px;box-shadow:0 2px 5px rgba(0,0,0,.15)}
-
+    
   </style>
 </head>
 <body>
@@ -112,6 +116,201 @@
         </h2>
       </div>
     </section>
+        
+    <!-- SPEAKERS -->
+    <section id="sprekers" aria-label="Sprekers">
+      <div class="container">
+        <h2 class="section-title nl">Sprekers</h2>
+        <h2 class="section-title en" hidden>Speakers</h2>
+        
+        <div class="tabs">
+          <div class="tablist" role="tablist">
+            <button id="tab-2022" role="tab" aria-selected="false" aria-controls="panel-2022">2022</button>
+            <button id="tab-2023" role="tab" aria-selected="false" aria-controls="panel-2023">2023</button>
+            <button id="tab-2024" role="tab" aria-selected="false" aria-controls="panel-2024">2024</button>
+            <button id="tab-2025" role="tab" aria-selected="true" aria-controls="panel-2025">2025</button>
+          </div>
+          
+          <div id="panel-2025" role="tabpanel">
+            <div class="lead">Speakers for this year will be announced soon</div>
+          </div>
+
+          <div id="panel-2024" role="tabpanel" hidden>
+            <p class="lead nl">Ontdek de diepe kracht van schoonheid op onze vormingsdag! Schoonheid is niet enkel wat we zien, maar ook wat we ervaren en voelen in de wereld om ons heen. Vanuit een christelijk perspectief duiken we in hoe schoonheid verbonden is met goedheid en waarheid, en hoe het ons kan leiden naar een dieper begrip van onszelf, anderen en God. Laat je inspireren door inzichten die je ogen openen voor de schoonheid in het alledaagse én het buitengewone. Samen verkennen we hoe schoonheid ons vrijmaakt en waarom ze, zoals Dostojevski zegt, de wereld kan redden. Kom en laat je verrassen!</p>
+            <p class="lead en" hidden>Discover the profound power of beauty. From a Christian perspective, we explore how beauty is connected to goodness and truth—and how this opens our eyes to ourselves, others, and God.</p>
+            
+            <div class="speakers">
+              <article class="speaker">
+                <div class="avatar">
+                  <img alt="Prof. Andrea Robiglio" src="Speakers/2024/Andrea.jpg.avif" loading="lazy" />
+                  <span class="dot teal" aria-hidden="true"></span>
+                  <span class="dot coral" aria-hidden="true"></span>
+                </div>
+                <div>
+                  <h3 class="nl">Wat is schoonheid? Schoonheid in de oudheid, de middeleeuwen en de renaissance</h3>
+                  <h3 class="en" hidden>What is Beauty? Beauty in Ancient, Medieval and Renaissance times</h3>
+                  <div class="underline" aria-hidden="true"></div>
+                  <div class="nl">
+                    <p>Prof <strong>Andrea Robiglio</strong> is professor in de geschiedenis van de middeleeuwse en renaissancistische filosofie, met een specialisatie in filosofische antropologie, ethiek en politiek van de 12e tot de 17e eeuw.</p>
+                    <p>Zijn onderzoek gaat ook dieper in op de geschiedenis van de filosofische historiografie, met name in de 20e eeuw, en de relatie tussen filosofie en literatuur.</p>
+                  </div>
+                  <p class="en" hidden><strong>Prof. Andrea Robiglio</strong> is a Professor of the History of Medieval and Renaissance Philosophy, specializing in philosophical anthropology, ethics, and politics from the 12th to the 17th century. His research also delves into the history of philosophical historiography, particularly in the 20th century, and the relationship between philosophy and literature.</p>
+                </div>
+              </article>
+              
+              <article class="speaker">
+                <div class="avatar">
+                  <img alt="Pr Luc Simons" src="Speakers/2024/Luc.jpg.avif" loading="lazy" />
+                  <span class="dot teal" aria-hidden="true"></span>
+                  <span class="dot coral" aria-hidden="true"></span>
+                </div>
+                <div>
+                  <h3 class="nl">Zuiverheid en schoonheid in het licht van de theologie van het lichaam</h3>
+                  <h3 class="en" hidden>Purity and Beauty in the Light of the Theology of the Body</h3>
+                  <div class="underline" aria-hidden="true"></div>
+                  <div class="nl">
+                    <p>Pr <strong>Luc Simons</strong> is priester van het bisdom Roermond in Nederland. Hij heeft een bijzondere aandacht voor de pastorale zorg rond gezinnen en het bekendmaken van het gedachtengoed van de heilige paus Johannes Paulus II over lichamelijkheid en seksualiteit (Theologie van het Lichaam).</p>
+                    <p>Hij behaalde een Master ‘Marriage and Family’ en een Licentiaat in de theologie aan het Internationaal Theologisch Instituut in Oostenrijk.</p>
+                  </div>
+                  <p class="en" hidden><strong>Fr. Luc Simons</strong> is a priest of the Diocese of Roermond in the Netherlands. He has a special focus on pastoral care for families and promoting the teachings of Saint Pope John Paul II on the body and sexuality (Theology of the Body). He obtained a Master's in Marriage and Family and a Licentiate in Theology from the International Theological Institute in Austria.</p>
+                </div>
+              </article>
+              
+              <article class="speaker">
+                <div class="avatar">
+                  <img alt="Dr. Gudrun Kugler" src="Speakers/2024/gudrun-kugler.jpg.avif" loading="lazy" />
+                  <span class="dot teal" aria-hidden="true"></span>
+                  <span class="dot coral" aria-hidden="true"></span>
+                </div>
+                <div>
+                  <h3 class="nl">Waarom schoonheid belangrijk is: gezinsleven & persoonlijke groei</h3>
+                  <h3 class="en" hidden>Why Beauty Matters: family life & personal growth</h3>
+                  <div class="underline" aria-hidden="true"></div>
+                  <p class="nl">Dr. <strong>Gudrun Kugler</strong> is een Oostenrijkse politica, theoloog en jurist, die momenteel als lid van de Nationale Raad van Oostenrijk dient. Ze is een prominente voorvechtster voor pro-life-kwesties en de bescherming van het traditionele huwelijk. Kugler heeft ook een groot deel van haar werk gewijd aan het bestrijden van mensenhandel, het verzet tegen de doodstraf en het verdedigen van religieuze vrijheid. Ze is een uitgesproken voorstander van de bestrijding van discriminatie en vervolging van Christenen en andere geloofsgroepen, zowel in Europa als wereldwijd.</p>
+                  <p class="en" hidden><strong>Dr. Gudrun Kugler</strong> is an Austrian politician, theologian, and jurist, currently serving as a member of Austria's National Council. She is a prominent advocate for pro-life causes and the protection of traditional marriage. Kugler has also dedicated much of her work to combating human trafficking, opposing the death penalty, and defending religious freedom. She is a vocal advocate against the discrimination and persecution of Christians and other faith groups, both in Europe and around the world.</p>
+                </div>
+              </article>
+              
+              <article class="speaker">
+                <div class="avatar">
+                  <img alt="Pr Jean Paul Hernandez" src="Speakers/2024/jean-paul-hernandez.jpg.avif" loading="lazy" />
+                  <span class="dot teal" aria-hidden="true"></span>
+                  <span class="dot coral" aria-hidden="true"></span>
+                </div>
+                <div>
+                  <h3 class="nl">Schoonheid als weg naar God</h3>
+                  <h3 class="en" hidden>Beauty as a Path to God</h3>
+                  <div class="underline" aria-hidden="true"></div>
+                  <p class="nl">Pr Jean Paul Hernandez is Jezuïet en theoloog, geboren in Zwitserland uit een familie van Spaanse afkomst. Geïnspireerd door paus Johannes Paulus II en de geschriften van St. Ignatius van Loyola, volgde hij zijn roeping. Hij is vooral bekend als de oprichter van “Living Stones”, dat kunst en architectuur inzet om de onvoorwaardelijke liefde van God te verkondigen. Momenteel geeft hij les in theologie in Napels en blijft hij de beweging begeleiden, die in meer dan 40 steden actief is. Tegelijkertijd zet hij zich met volle overtuiging in voor Ignatiaanse spiritualiteit en de vorming van jongeren.</p>
+                  <p class="en" hidden><strong>Fr. Jean Paul Hernandez</strong>is a Jesuit priest and theologian, born in Switzerland to Spanish immigrants. He pursued his vocation after being inspired by Pope John Paul II and the writings of St. Ignatius of Loyola. Fr. Hernandez is known for founding the "Living Stones" initiative, which uses art and architecture to share the gratuitous love of God. Currently teaching theology in Naples, he continues to guide the movement, now active in over 40 cities, while remaining deeply committed to Ignatian spirituality and youth formation.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          
+          <div id="panel-2023" role="tabpanel" hidden>
+            <p class="lead nl"><strong>Over de 3 goddelijke deugden die jouw leven reliëf kunnen geven.</strong></p>
+            <p class="lead en" hidden><strong>On the 3 theological virtues to give your life perspective</strong></p>
+
+            <p class="nl">Vandaag de dag riskeren 'deugden' archaïsch te klinken. Men denkt al snel aan beknellende gedragscodes of regels die ons van buitenaf worden opgelegd. Niets is minder waar. De deugden vervolmaken ons ook van binnen uit. Ze verfijnen onze natuurlijke aanleg voor het goede. Het cultiveren van deugden polijst onze gevoelens, maakt ons meester van onze impulsen, geeft inzicht in onze beslissingen, kracht aan onze daden en empathie in onze relaties. Dit is wat Plato, Aristoteles, H. Augustinus, H. Thomas van Aquino dachten, en vele anderen.</p>
+            <p class="en" hidden>Today, "virtues" risk sounding archaic. One may quickly think of oppressive codes of conduct or rules imposed on us from outside. Nothing could be further from the truth. The virtues also perfect us from within. They refine our natural inclination to the good. Cultivating virtues polishes our feelings, makes us masters of our impulses, gives insight into our decisions, strength to our actions and empathy in our relationships. This is what Plato, Aristotle, St. Augustine, St. Thomas Aquinas, and many others thought.</p>
+
+            <p class="lead"><i>"The exercise of the virtues is itself a crucial component of the good life for man"<br/>(Alasdair McIntyre)</i></p>
+
+            <p class="nl">In deze vormingsdag nemen we de drie theologale deugden onder de loep: geloof, hoop en liefde. Per deugd is er een gastspreker die vanuit zijn of haar ervaring en expertise zal laten zien hoe de deugd een cruciale rol speelt in het leven van elke christen en hoe we erin kunnen groeien.</p>
+            <p class="en" hidden>In this day of formation we examine the three theological virtues: faith, hope and love. For each virtue, a guest speaker will, based on his or her experience and expertise, dive into how the virtues play a crucial role in the life of every Christian and how we can grow in them. </p>
+
+            <div class="speakers">
+              <article class="speaker">
+                <div class="avatar">
+                  <img alt="Fr. Jacques Philippe" src="Speakers/2023/Jacques-Philippe.avif" loading="lazy" />
+                  <span class="dot teal" aria-hidden="true"></span>
+                  <span class="dot coral" aria-hidden="true"></span>
+                </div>
+                <div>
+                  <h3>Fr. Jacques Philippe</h3>
+                  <div class="underline" aria-hidden="true"></div>
+                  <p class="nl">P. Jacques Philippe maakt deel uit van de Communauté des Béatitudes en gerenommeerd schrijver. Van zijn boeken over thema's als gebed en innerlijke vrijheid zijn meer dan een miljoen exemplaren in 24 talen verkocht.</p>
+                  <p class="en" hidden>Fr. Jacques Philippe is a priest at the Communauté des Béatitudes and a renowned writer. His books on themes such as prayer and inner freedom have sold more than a million copies in 24 languages.</p>
+                </div>
+              </article>
+              <article class="speaker">
+                <div class="avatar">
+                  <img alt="Laetitia Calmeyn" src="Speakers/2023/Laetitia.avif" loading="lazy" />
+                  <span class="dot teal" aria-hidden="true"></span>
+                  <span class="dot coral" aria-hidden="true"></span>
+                </div>
+                <div>
+                  <h3>Laetitia Calmeyn</h3>
+                  <div class="underline" aria-hidden="true"></div>
+                  <p class="nl">Laetitia Calmeyn is dokter in de theologie en consultor bij het Dicasterie voor de Geloofsleer. Ze komt uit Brussel en werkt als hoogleraar aan de Faculté Notre-Dame; de kerkelijke theologische faculteit van het bisdom Parijs.</p>
+                  <p class="en" hidden>Laetitia Calmeyn is a doctor of theology and a consultant at the Dicastery for the Doctrine of the Faith. She is born in Brussels and works as a professor at the Faculté Notre-Dame; the ecclesiastical theological faculty of the Diocese of Paris.</p>
+                </div>
+              </article>
+              <article class="speaker">
+                <div class="avatar">
+                  <img alt="Brenden Thompson" src="Speakers/2023/Brenden.avif" loading="lazy" />
+                  <span class="dot teal" aria-hidden="true"></span>
+                  <span class="dot coral" aria-hidden="true"></span>
+                </div>
+                <div>
+                  <h3>Brenden Thompson</h3>
+                  <div class="underline" aria-hidden="true"></div>
+                  <p class="nl">Brenden Thompson is UK Program Director van Word on Fire, een wereldwijd katholiek non-profit media-apostolaat dat miljoenen mensen bereikt. Hij is ook
+CEO van Catholic Voices, een initiatief dat er naar streeft het katholieke geloof in media en debatten beter aan de man te brengen.</p>
+                  <p class="en" hidden>Brenden Thompson is UK Program Director of Word on Fire, a global Catholic nonprofit media apostolate that reaches millions of people. He is also CEO of Catholic Voices, an initiative that seeks to  to make the Catholic faith better known, primarily in media and debates.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          
+          <div id="panel-2022" role="tabpanel" hidden>
+            <p class="nl">In deze vormingsdag nemen we samen de vier hoofddeugden (kardinale deugden) onder de loep: verstandigheid, rechtvaardigheid, moed en matigheid. Per hoofddeugd is een gastspreker voorzien die vanuit zijn of haar ervaring en expertise zal laten zien hoe de hoofddeugd een cruciale rol speelt in het leven van elke Christen en hoe we erin kunnen groeien.</p>
+            <p class="en" hidden>In this day of formation we examine the three theological virtues: faith, hope and love. For each virtue, a guest speaker will, based on his or her experience and expertise, dive into how the virtues play a crucial role in the life of every Christian and how we can grow in them. </p>
+
+            <div class="speakers">
+              <article class="speaker">
+                <div class="avatar">
+                  <img alt="SOPHIA KUBY" src="Speakers/2022/kuby.avif" loading="lazy" />
+                  <span class="dot teal" aria-hidden="true"></span>
+                  <span class="dot coral" aria-hidden="true"></span>
+                </div>
+                <div>
+                  <h3>SOPHIA KUBY</h3>
+                  <div class="underline" aria-hidden="true"></div>
+                  <p>Sophia Kuby serves as director of Strategic Relations & Training for ADF International and is based in Vienna, Austria. She oversees and develops training programs around the world such as Areté Academy (Arêté = virtue, moral excellence) to raise a new generation of Christians for the public square. She holds a M.A. and B.A. in philosophy.</p>
+                </div>
+              </article>
+              <article class="speaker">
+                <div class="avatar">
+                  <img alt="FR. GREGORY PINE, OP" src="Speakers/2022/pine.avif" loading="lazy" />
+                  <span class="dot teal" aria-hidden="true"></span>
+                  <span class="dot coral" aria-hidden="true"></span>
+                </div>
+                <div>
+                  <h3>FR. GREGORY PINE, OP</h3>
+                  <div class="underline" aria-hidden="true"></div>
+                  <p>Fr. Gregory Pine, is a Dominican friar of the Province of Saint Joseph. He is author of Credo: An RCIA Program and Marian Consecration with Aquinas and Prudence: Choose Confidently, Live Boldly. He also contributes to many catholic podcasts among which Godsplaining and Pints with Aquinas. Currently, he is assigned as a doctoral student in dogmatic theology at the University of Fribourg, Switzerland.</p>
+                </div>
+              </article>
+              <article class="speaker">
+                <div class="avatar">
+                  <img alt="Brenden Thompson" src="Speakers/2022/standaert.avif" loading="lazy" />
+                  <span class="dot teal" aria-hidden="true"></span>
+                  <span class="dot coral" aria-hidden="true"></span>
+                </div>
+                <div>
+                  <h3>Brenden Thompson</h3>
+                  <div class="underline" aria-hidden="true"></div>
+                  <p class="nl">Benoît Standaert is benedictijn van de Sint-Andriesabdij in Zevenkerken-Brugge. Hij studeerde in Rome, Jeruzalem en Nijmegen, waar hij in 1978 promoveerde op het Marcusevangelie. In binnen- en buitenland is hij betrokken bij vormings- en opleidingswerk. Zijn boek De Jezusruimte werd een spraakmakend boek dat ondertussen in verschillende talen verscheen. Ook zijn Wijsheid uit de woestijn, Leven met de psalmen en De schat van God zijn bestsellers.</p>
+                  <p class="en" hidden>Fr. Benoît Standaert is Benedictine Monk of the St. Andrew's Abbey in Zevenkerken, Bruges. He studied in Rome, Jerusalem and Nijmegen, where he obtained his doctorate in 1978 on the Gospel of Mark. He is involved in education and training (inter)nationally. His book De Jezusruimte became a striking book that has since been published in various languages. Also Wijsheid uit de woestijn, Leven met de psalmen and De schat van God  are bestsellers.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- ABOUT -->
     <section id="over-ons" class="about" aria-label="Over ons">
@@ -120,89 +319,7 @@
         <h2 class="en" hidden>About us</h2>
         <p class="lead nl">Het initiatief <strong>Vormingsdagen</strong> gaat uit van een groep jongeren op zoek naar vorming van hun katholiek geloof. Zij stellen zich in dienst van de Kerk en willen trouw aan Haar intellectuele traditie jongeren samen brengen en vorming aanbieden.</p>
         <p class="lead en" hidden>The initiative <strong>Vormingsdagen</strong> comes from a group of young people seeking formation in their Catholic faith. They wish to bring students and young professionals together to offer formation in the service of the Church, faithful to Her intellectual tradition.</p>
-      </div>
-    </section>
 
-    <!-- SPEAKERS -->
-    <section id="sprekers" aria-label="Sprekers">
-      <div class="container">
-        <h2 class="section-title nl">Sprekers</h2>
-        <h2 class="section-title en" hidden>Speakers</h2>
-        <p class="lead nl">Ontdek de diepe kracht van schoonheid op onze vormingsdag! Schoonheid is niet enkel wat we zien, maar ook wat we ervaren en voelen in de wereld om ons heen. Vanuit een christelijk perspectief duiken we in hoe schoonheid verbonden is met goedheid en waarheid, en hoe het ons kan leiden naar een dieper begrip van onszelf, anderen en God. Laat je inspireren door inzichten die je ogen openen voor de schoonheid in het alledaagse én het buitengewone. Samen verkennen we hoe schoonheid ons vrijmaakt en waarom ze, zoals Dostojevski zegt, de wereld kan redden. Kom en laat je verrassen!</p>
-        <p class="lead en" hidden>Discover the profound power of beauty. From a Christian perspective, we explore how beauty is connected to goodness and truth—and how this opens our eyes to ourselves, others, and God.</p>
-
-        <div class="speakers">
-          <article class="speaker">
-            <div class="avatar">
-              <img alt="Prof. Andrea Robiglio" src="Speakers/2024/Andrea.jpg.avif" loading="lazy" />
-              <span class="dot teal" aria-hidden="true"></span>
-              <span class="dot coral" aria-hidden="true"></span>
-            </div>
-            <div>
-              <h3 class="nl">Wat is schoonheid? Schoonheid in de oudheid, de middeleeuwen en de renaissance</h3>
-              <h3 class="en" hidden>What is Beauty? Beauty in Ancient, Medieval and Renaissance times</h3>
-              <div class="underline" aria-hidden="true"></div>
-              <div class="nl">
-                <p>Prof <strong>Andrea Robiglio</strong> is professor in de geschiedenis van de middeleeuwse en renaissancistische filosofie, met een specialisatie in filosofische antropologie, ethiek en politiek van de 12e tot de 17e eeuw.</p>
-                <p>Zijn onderzoek gaat ook dieper in op de geschiedenis van de filosofische historiografie, met name in de 20e eeuw, en de relatie tussen filosofie en literatuur.</p>
-              </div>
-              <p class="en" hidden><strong>Prof. Andrea Robiglio</strong> is a Professor of the History of Medieval and Renaissance Philosophy, specializing in philosophical anthropology, ethics, and politics from the 12th to the 17th century. His research also delves into the history of philosophical historiography, particularly in the 20th century, and the relationship between philosophy and literature.</p>
-            </div>
-          </article>
-
-          <article class="speaker">
-            <div class="avatar">
-              <img alt="Pr Luc Simons" src="Speakers/2024/Luc.jpg.avif" loading="lazy" />
-              <span class="dot teal" aria-hidden="true"></span>
-              <span class="dot coral" aria-hidden="true"></span>
-            </div>
-            <div>
-              <h3 class="nl">Zuiverheid en schoonheid in het licht van de theologie van het lichaam</h3>
-              <h3 class="en" hidden>Purity and Beauty in the Light of the Theology of the Body</h3>
-              <div class="underline" aria-hidden="true"></div>
-              <div class="nl">
-                <p>Pr <strong>Luc Simons</strong> is priester van het bisdom Roermond in Nederland. Hij heeft een bijzondere aandacht voor de pastorale zorg rond gezinnen en het bekendmaken van het gedachtengoed van de heilige paus Johannes Paulus II over lichamelijkheid en seksualiteit (Theologie van het Lichaam).</p>
-                <p>Hij behaalde een Master ‘Marriage and Family’ en een Licentiaat in de theologie aan het Internationaal Theologisch Instituut in Oostenrijk.</p>
-              </div>
-              <p class="en" hidden><strong>Fr. Luc Simons</strong> is a priest of the Diocese of Roermond in the Netherlands. He has a special focus on pastoral care for families and promoting the teachings of Saint Pope John Paul II on the body and sexuality (Theology of the Body). He obtained a Master's in Marriage and Family and a Licentiate in Theology from the International Theological Institute in Austria.</p>
-            </div>
-          </article>
-
-          <article class="speaker">
-            <div class="avatar">
-              <img alt="Dr. Gudrun Kugler" src="Speakers/2024/gudrun-kugler.jpg.avif" loading="lazy" />
-              <span class="dot teal" aria-hidden="true"></span>
-              <span class="dot coral" aria-hidden="true"></span>
-            </div>
-            <div>
-              <h3 class="nl">Waarom schoonheid belangrijk is: gezinsleven & persoonlijke groei</h3>
-              <h3 class="en" hidden>Why Beauty Matters: family life & personal growth</h3>
-              <div class="underline" aria-hidden="true"></div>
-              <p class="nl">Dr. <strong>Gudrun Kugler</strong> is een Oostenrijkse politica, theoloog en jurist, die momenteel als lid van de Nationale Raad van Oostenrijk dient. Ze is een prominente voorvechtster voor pro-life-kwesties en de bescherming van het traditionele huwelijk. Kugler heeft ook een groot deel van haar werk gewijd aan het bestrijden van mensenhandel, het verzet tegen de doodstraf en het verdedigen van religieuze vrijheid. Ze is een uitgesproken voorstander van de bestrijding van discriminatie en vervolging van Christenen en andere geloofsgroepen, zowel in Europa als wereldwijd.</p>
-              <p class="en" hidden><strong>Dr. Gudrun Kugler</strong> is an Austrian politician, theologian, and jurist, currently serving as a member of Austria's National Council. She is a prominent advocate for pro-life causes and the protection of traditional marriage. Kugler has also dedicated much of her work to combating human trafficking, opposing the death penalty, and defending religious freedom. She is a vocal advocate against the discrimination and persecution of Christians and other faith groups, both in Europe and around the world.</p>
-            </div>
-          </article>
-
-          <article class="speaker">
-            <div class="avatar">
-              <img alt="Pr Jean Paul Hernandez" src="Speakers/2024/jean-paul-hernandez.jpg.avif" loading="lazy" />
-              <span class="dot teal" aria-hidden="true"></span>
-              <span class="dot coral" aria-hidden="true"></span>
-            </div>
-            <div>
-              <h3 class="nl">Schoonheid als weg naar God</h3>
-              <h3 class="en" hidden>Beauty as a Path to God</h3>
-              <div class="underline" aria-hidden="true"></div>
-              <p class="nl">Pr Jean Paul Hernandez is Jezuïet en theoloog, geboren in Zwitserland uit een familie van Spaanse afkomst. Geïnspireerd door paus Johannes Paulus II en de geschriften van St. Ignatius van Loyola, volgde hij zijn roeping. Hij is vooral bekend als de oprichter van “Living Stones”, dat kunst en architectuur inzet om de onvoorwaardelijke liefde van God te verkondigen. Momenteel geeft hij les in theologie in Napels en blijft hij de beweging begeleiden, die in meer dan 40 steden actief is. Tegelijkertijd zet hij zich met volle overtuiging in voor Ignatiaanse spiritualiteit en de vorming van jongeren.</p>
-              <p class="en" hidden><strong>Fr. Jean Paul Hernandez</strong>is a Jesuit priest and theologian, born in Switzerland to Spanish immigrants. He pursued his vocation after being inspired by Pope John Paul II and the writings of St. Ignatius of Loyola. Fr. Hernandez is known for founding the "Living Stones" initiative, which uses art and architecture to share the gratuitous love of God. Currently teaching theology in Naples, he continues to guide the movement, now active in over 40 cities, while remaining deeply committed to Ignatian spirituality and youth formation.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
         <div class="gallery">
           <div class="row">
             <div class="item" style="flex-grow:0.27292"><img src="./Pictures/01.avif" alt=""></div>
@@ -236,9 +353,9 @@
         </div>
       </div>
     </section>
-
+    
   </main>
-
+  
   <script>
     // Language toggle
     const nlBtn = document.getElementById('btn-nl');
@@ -254,6 +371,16 @@
     }
     nlBtn.addEventListener('click',()=>setLang('nl'));
     enBtn.addEventListener('click',()=>setLang('en'));
+    // Year tabs
+    const tabs = document.querySelectorAll('#sprekers [role="tab"]');
+    const panels = document.querySelectorAll('#sprekers [role="tabpanel"]');
+    tabs.forEach(tab=>{
+      tab.addEventListener('click', ()=>{
+        const target = tab.getAttribute('aria-controls');
+        tabs.forEach(t=>t.setAttribute('aria-selected', String(t===tab)));
+        panels.forEach(panel=>{panel.hidden = panel.id !== target;});
+      });
+    });
   </script>
 </body>
 </html>
