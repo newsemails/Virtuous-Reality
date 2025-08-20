@@ -18,7 +18,7 @@
     h1,h2,h3{line-height:1.15; margin:0 0 .6rem}
     p{margin:.5rem 0 1rem}
     a{color:inherit}
-    section{padding:clamp(2rem,6vw,4rem) 1rem}
+    section{padding:3rem 1rem}
     .container{max-width:var(--maxw); margin:0 auto}
 
     /* Language toggle inside hero, blob perfectly centered behind */
@@ -42,10 +42,10 @@
     .b1{width:40vw; height:40vw; right:-25vw; bottom:0; background:var(--peach); z-index: -1;}
     .b3{width:140px; height:140px; left:40px; bottom:60px; background:var(--mint)}
 
-    .lead{max-width:68ch; color:var(--muted); margin-bottom:5rem; text-align:center; margin-left:auto; margin-right:auto}
+    .lead{max-width:68ch; color:var(--muted); text-align:center; margin-left:auto; margin-right:auto}
 
     .section-title{font-size:clamp(2rem,5vw,3rem); text-align:center; margin-bottom:1rem}
-    .speakers{display:grid; gap:2rem; grid-template-columns:repeat(12,1fr)}
+    .speakers{display:grid; gap:2rem; grid-template-columns:repeat(12,1fr); margin-top: 5rem;}
     .speaker{grid-column:span 6; display:grid; grid-template-columns:140px 1fr; gap:1rem; align-items:start}
     .avatar{position:relative; width:140px; height:140px}
     .avatar img{width:100%; height:100%; object-fit:cover; border-radius:999px; border:6px solid #fff; box-shadow:0 10px 30px #00000012}
@@ -110,6 +110,16 @@
             <small>for</small><br/>Youth
           </span>
         </h2>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="over-ons" class="about" aria-label="Over ons">
+      <div class="container">
+        <h2 class="nl">Over ons</h2>
+        <h2 class="en" hidden>About us</h2>
+        <p class="lead nl">Het initiatief <strong>Vormingsdagen</strong> gaat uit van een groep jongeren op zoek naar vorming van hun katholiek geloof. Zij stellen zich in dienst van de Kerk en willen trouw aan Haar intellectuele traditie jongeren samen brengen en vorming aanbieden.</p>
+        <p class="lead en" hidden>The initiative <strong>Vormingsdagen</strong> comes from a group of young people seeking formation in their Catholic faith. They wish to bring students and young professionals together to offer formation in the service of the Church, faithful to Her intellectual tradition.</p>
       </div>
     </section>
 
@@ -191,13 +201,8 @@
       </div>
     </section>
 
-    <!-- ABOUT -->
-    <section id="over-ons" class="about" aria-label="Over ons">
+    <section>
       <div class="container">
-        <h2 class="nl">Over ons</h2>
-        <h2 class="en" hidden>About us</h2>
-        <p class="lead nl">Het initiatief <strong>Vormingsdagen</strong> gaat uit van een groep jongeren op zoek naar vorming van hun katholiek geloof. Zij stellen zich in dienst van de Kerk en willen trouw aan Haar intellectuele traditie jongeren samen brengen en vorming aanbieden.</p>
-        <p class="lead en" hidden>The initiative <strong>Vormingsdagen</strong> comes from a group of young people seeking formation in their Catholic faith. They wish to bring students and young professionals together to offer formation in the service of the Church, faithful to Her intellectual tradition.</p>
         <div class="gallery">
           <div class="row">
             <div class="item" style="flex-grow:0.27292"><img src="./Pictures/01.avif" alt=""></div>
@@ -231,6 +236,7 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <script>
